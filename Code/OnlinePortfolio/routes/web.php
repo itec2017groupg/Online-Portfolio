@@ -20,3 +20,6 @@ Route::get('/admin',function(){
 Route::get('/test',function(){
   return view('pages/test');
 });
+Route::get('login','LoginController@getLogin');
+Route::post('login','LoginController@postLogin');
+//Route::get('','HomeController@getIndex');
