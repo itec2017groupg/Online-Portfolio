@@ -23,3 +23,7 @@ Route::get('/test',function(){
 Route::get('login','LoginController@getLogin');
 Route::post('login','LoginController@postLogin');
 //Route::get('','HomeController@getIndex');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
