@@ -20,6 +20,9 @@ Route::get('/admin',function(){
 Route::get('/test',function(){
   return view('pages/test');
 });
+Route::get('/taocv',function(){
+  return view('pages/taocv');
+});
 Route::get('login','LoginController@getLogin');
 Route::post('login','LoginController@postLogin');
 
