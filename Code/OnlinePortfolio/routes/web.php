@@ -11,12 +11,40 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages/home');
+Route::get('/admin', function () {
+    return view('adminside/pages/index');
 });
-Route::get('/admin',function(){
-  return view('pages/adminsite');
-});
-Route::get('/test',function(){
-  return view('pages/test');
-});
+
+Route::get('/users', 'AdminUsersController@index');
+Route::get('/users/get_datatable', 'AdminUsersController@get_datatable');
+Route::get('/users/edit/{id}',['uses'=>'AdminUsersController@edit','as'=>'edit']);
+Route::get('/users/delete/{id}',['uses'=>'AdminUsersController@delete','as'=>'delete']);
+Route::post('/update&{id}',['uses'=>'AdminUsersController@update','as'=>'update']);
+
+
+Route::get('/skills', 'AdminSkillsController@index');
+Route::get('/skills/get_datatable', 'AdminSkillsController@get_datatable');
+Route::get('/skills/edit/{id}',['uses'=>'AdminSkillsController@edit','as'=>'edit']);
+Route::get('/skills/delete/{id}',['uses'=>'AdminSkillsController@delete','as'=>'delete']);
+Route::post('/skill/update&{id}',['uses'=>'AdminSkillsController@update','as'=>'update']);
+
+
+Route::get('/degrees', 'AdminDegreesController@index');
+Route::get('/degrees/get_datatable', 'AdminDegreesController@get_datatable');
+Route::get('/degrees/edit/{id}',['uses'=>'AdminDegreesController@edit','as'=>'edit']);
+Route::get('/degrees/delete/{id}',['uses'=>'AdminDegreesController@delete','as'=>'delete']);
+Route::post('/degree/update&{id}',['uses'=>'AdminDegreesController@update','as'=>'update']);
+
+
+Route::get('/companies', 'AdminCompaniesController@index');
+Route::get('/companies/get_datatable', 'AdminCompaniesController@get_datatable');
+Route::get('/companies/edit/{id}',['uses'=>'AdminCompaniesController@edit','as'=>'edit']);
+Route::get('/companies/delete/{id}',['uses'=>'AdminCompaniesController@delete','as'=>'delete']);
+Route::post('/company/update&{id}',['uses'=>'AdminCompaniesController@update','as'=>'update']);
+
+
+//Route::get('/admin/users','AdminController@users');
+
+Auth::routes();
+Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home');
