@@ -8,7 +8,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+<<<<<<< HEAD
     <title>{{ config('app.name', 'Laravel') }}</title>
+=======
+    <title>{{ config('app.name', 'GroupG') }}</title>
+>>>>>>> 487b66f200275c3fb3b5e1928b50905154e62f57
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -29,14 +33,22 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
+<<<<<<< HEAD
                         {{ config('app.name', 'Laravel') }}
+=======
+                        {{ config('Home', 'GroupG') }}
+>>>>>>> 487b66f200275c3fb3b5e1928b50905154e62f57
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
+<<<<<<< HEAD
 
+=======
+                        &nbsp;
+>>>>>>> 487b66f200275c3fb3b5e1928b50905154e62f57
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -53,11 +65,14 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
+<<<<<<< HEAD
                                       @if(Auth::user()->ulvl == '0' || Auth::user()->ulvl == '1')
                                         <a href="{{url('/admin')  }}">
                                           Admin side
                                         </a>
                                       @endif
+=======
+>>>>>>> 487b66f200275c3fb3b5e1928b50905154e62f57
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

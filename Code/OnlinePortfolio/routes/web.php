@@ -14,6 +14,7 @@
 Route::get('/admin', function () {
     return view('adminside/pages/index');
 });
+<<<<<<< HEAD
 
 Route::get('/users', 'AdminUsersController@index');
 Route::get('/users/get_datatable', 'AdminUsersController@get_datatable');
@@ -47,4 +48,14 @@ Route::post('/company/update&{id}',['uses'=>'AdminCompaniesController@update','a
 
 Auth::routes();
 Route::get('/', 'HomeController@index');
+=======
+Route::get('/taocv',function(){
+  return view('pages/taocv');
+});
+Route::get('login','LoginController@getLogin');
+Route::post('login','LoginController@postLogin');
+
+Auth::routes();
+
+>>>>>>> 487b66f200275c3fb3b5e1928b50905154e62f57
 Route::get('/home', 'HomeController@index')->name('home');
